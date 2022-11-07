@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class OurPairingController {
     @GetMapping("/hello")
     @ResponseBody
-    public String hello(@RequestParam String name){
-        return "This is our pairing website " + name ;
+    public String hello(@RequestParam String name, String food){
+        return "This is our pairing website. Welcome " + name + "! The recommended food of the day is " + food;
     }
 }
