@@ -30,23 +30,6 @@ public class NameCountService {
 
      }
 
-     public String countInt(String name ){
-         if (name.isEmpty()) {
-             return "0";
-         }
-         String lowerName = name.toLowerCase();
-
-         names.add(lowerName);
-         int count = 0;
-
-         for (String string : names){
-             if (string.equals(lowerName)){
-                 count++;
-             }
-         }
-
-         return count;
-     }
 
      public String langCounter(String name, String language, int count){
 
