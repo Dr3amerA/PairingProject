@@ -9,7 +9,7 @@ public class LangService {
         if (name.isEmpty()) {
             return "Please give me your name";
         }
-
+        int count = nameCountService.countNames(name);
         if (language.equals("en") || language.isEmpty()) {
             return "My name is " + name + ".";
         } else if (language.equals("el")) {
