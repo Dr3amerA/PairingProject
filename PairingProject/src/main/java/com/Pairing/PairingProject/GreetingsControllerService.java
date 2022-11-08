@@ -32,8 +32,8 @@ public class GreetingsControllerService {
     @ResponseBody
     public String greetings(@RequestParam String name, String language) {
         String greetings = langService.translate(name, language);
+        String count = nameCountService.countNames(name, language);
 
-
-        return greetings;
+        return greetings + " " + count;
     }
 }
