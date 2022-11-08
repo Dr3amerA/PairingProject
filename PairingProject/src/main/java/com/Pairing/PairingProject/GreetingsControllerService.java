@@ -13,7 +13,7 @@ public class GreetingsControllerService {
     private NameCountService nameCountService;
 
     @Autowired
-    public void GreetingsControllerService(NameCountService nameCountService, LangService langService) {
+    public GreetingsControllerService(NameCountService nameCountService, LangService langService) {
         this.nameCountService = nameCountService;
         this.langService = langService;
     }

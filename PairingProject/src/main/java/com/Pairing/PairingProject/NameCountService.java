@@ -11,6 +11,9 @@ public class NameCountService {
 
      public String countNames(String name, String language){
 
+         if (name.isEmpty()) {
+             return "";
+         }
          String lowerName = name.toLowerCase();
 
          names.add(lowerName);
@@ -27,6 +30,24 @@ public class NameCountService {
 
      }
 
+     public String countInt(String name ){
+         if (name.isEmpty()) {
+             return "0";
+         }
+         String lowerName = name.toLowerCase();
+
+         names.add(lowerName);
+         int count = 0;
+
+         for (String string : names){
+             if (string.equals(lowerName)){
+                 count++;
+             }
+         }
+
+         return count;
+     }
+
      public String langCounter(String name, String language, int count){
 
          if (language.equals("en") || language.isEmpty()) {
@@ -36,7 +57,7 @@ public class NameCountService {
          } else if (language.equals("es")) {
              return "El nombre " + name + " se aparece " + count + " veces.";
          } else {
-             return "Does not compute. Please try again";
+             return "";
          }
      }
 }

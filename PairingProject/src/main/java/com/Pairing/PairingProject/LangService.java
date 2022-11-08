@@ -5,6 +5,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class LangService {
 
+
     public String translate(String name, String language){
         if (name.isEmpty()) {
             return "Please give me your name";
